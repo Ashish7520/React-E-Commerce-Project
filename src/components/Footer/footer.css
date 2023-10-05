@@ -1,0 +1,11 @@
+.footer {
+  position: relative;
+  background-color: #28242c;
+  padding: 10px;
+  color: white;
+  top: 600px;
+}
+
+.img {
+  width: 30px;
+}
