@@ -3,6 +3,7 @@ import NavbarReact from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/footer";
 import Product from "./components/Product/Product";
 import Cart from "./components/Cart/cart";
+import CartProvider from "./store/CartProvider";
 
 const App = () => {
   const [ShowCart, setShowCart] = useState(false);
@@ -17,10 +18,12 @@ const App = () => {
 
   return (
     <>
-      <NavbarReact onShowCart={ShowCartHandler} />
-      {ShowCart && <Cart onClick={hideCartHandler} />}
-      <Product />
-      <Footer />
+      <CartProvider>
+        <NavbarReact onShowCart={ShowCartHandler} />
+        {ShowCart && <Cart onClick={hideCartHandler} />}
+        <Product />
+        <Footer />
+      </CartProvider>
     </>
   );
 };

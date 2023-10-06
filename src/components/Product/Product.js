@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import CartContext from "../../store/cart-context";
 
 import "./Product.css";
 
@@ -31,6 +32,12 @@ const Product = (props) => {
     },
   ];
 
+  const cartCtx = useContext(CartContext);
+
+  const addCartHandler = (item) => {
+    cartCtx.addItem({ ...item, quantity: 1 });
+  };
+
   return (
     <>
       <Container>
@@ -46,6 +53,7 @@ const Product = (props) => {
                 style={{ position: "relative", left: "300px" }}
                 className="btn"
                 variant="secondary"
+                onClick={() => addCartHandler(item)}
               >
                 Add Cart
               </Button>

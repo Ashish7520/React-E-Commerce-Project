@@ -1,4 +1,4 @@
-/* cart.module.css */
+/* cartStyles.css */
 
 .cartName {
   text-align: center;
@@ -14,7 +14,7 @@
 }
 
 .outerDiv div {
-  width: 30%; /* Adjust based on your preference */
+  width: 30%;
 }
 
 .bodyDiv ul {
@@ -27,11 +27,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  border-bottom: 1px solid #000; /* Add the black separator */
+  border-bottom: 1px solid black;
 }
 
 .itemImage img {
-  width: 30px; /* Adjust based on your preference */
+  width: 30px;
   margin-right: 10px;
 }
 
@@ -42,15 +42,29 @@
 
 .itemPrice,
 .itemQuantity {
-  width: 30%; /* Adjust based on your preference */
+  width: 30%;
+  display: flex;
+  align-items: center;
 }
 
 .itemQuantity button {
-  margin-left: 10px;
+  margin: 0 5px;
 }
 
 .totalDiv {
   padding: 10px 20px;
   font-weight: bold;
   text-align: right;
+}
+
+.closeBtn {
+  display: inline;
+  margin-left: 20%;
+  margin-right: 30%;
+  margin-bottom: 20%;
+}
+
+.orderBtn {
+  display: inline;
+  margin-bottom: 20%;
 }
