@@ -1,9 +1,16 @@
 .footer {
   position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 10px;
+
+  /* position: relative;
   background-color: #28242c;
   padding: 10px;
   color: white;
-  top: 600px;
+  top: 600px; */
 }
 
 .img {

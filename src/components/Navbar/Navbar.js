@@ -16,7 +16,11 @@ const NavbarReact = (props) => {
             <Nav.Link href="#about">About</Nav.Link>
           </Nav>
           <Nav className="col-md-4 justify-content-end">
-            <Button variant="secondary" href="#carts">
+            <Button
+              onClick={props.onShowCart}
+              variant="secondary"
+              href="#carts"
+            >
               Cart
             </Button>
           </Nav>

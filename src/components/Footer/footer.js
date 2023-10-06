@@ -12,11 +12,7 @@ const Footer = () => {
     <footer className="footer">
       <Container>
         <Row className="mt-2">
-          <Col xs={5}>My-Ecommerce APP</Col>
-          <Col xs={4}>
-            {" "}
-            <p>&copy; 2023 Your Website</p>
-          </Col>
+          <Col xs={9}>My-Ecommerce APP</Col>
           <Col>
             <Image className="img" src={Youtube} roundedCircle />
           </Col>
