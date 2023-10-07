@@ -2,6 +2,8 @@ import React from "react";
 
 import { Container, Navbar, Nav, Button } from "react-bootstrap";
 
+import { Link } from "react-router-dom";
+
 const NavbarReact = (props) => {
   return (
     <>
@@ -11,16 +13,15 @@ const NavbarReact = (props) => {
             My Website
           </Navbar.Brand>
           <Nav className="col-md-5 justify-content-center">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#store">Store</Nav.Link>
-            <Nav.Link href="#about">About</Nav.Link>
+            <Link to="/home">Home</Link>
+            <Link to="/store">Store</Link>
+            <Link to="/about">About</Link>
+            {/* <Nav.Link Link="/home">Home</Nav.Link>
+            <Nav.Link Link="/store">Store</Nav.Link>
+            <Nav.Link Link="/about">About</Nav.Link> */}
           </Nav>
           <Nav className="col-md-4 justify-content-end">
-            <Button
-              onClick={props.onShowCart}
-              variant="secondary"
-              href="#carts"
-            >
+            <Button onClick={props.onShowCart} variant="secondary">
               Cart
             </Button>
           </Nav>
