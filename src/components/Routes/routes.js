@@ -12,9 +12,9 @@ const MainRoutes = () => {
     <>
       <CartProvider>
         <NavbarReact />
+        <Outlet />
+        <Footer />
       </CartProvider>
-      <Outlet />
-      <Footer />
     </>
   );
 };

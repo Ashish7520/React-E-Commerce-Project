@@ -1,0 +1,23 @@
+.headerBtn {
+  width: 300px;
+  margin-left: 100px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.playBtn {
+  margin-bottom: 5px;
+  width: 70px;
+}
+
+.bodyUl {
+  list-style-type: none;
+}
+
+.bodyLi {
+  padding: 5px;
+}
+
+.liSpan {
+  margin: 20px;
+}

@@ -9,13 +9,42 @@ const NavbarReact = (props) => {
     <>
       <Navbar bg="dark" expand="lg" variant="dark">
         <Container>
-          <Navbar.Brand className="col-md-3" href="#home">
-            My Website
+          <Navbar.Brand className="col-md-3">
+            <Link
+              style={{ color: "#ffffff", textDecoration: "none" }}
+              to="/home"
+            >
+              Nandawana Store
+            </Link>
           </Navbar.Brand>
           <Nav className="col-md-5 justify-content-center">
-            <Link to="/home">Home</Link>
-            <Link to="/store">Store</Link>
-            <Link to="/about">About</Link>
+            <Nav.Link>
+              {" "}
+              <Link
+                to="/home"
+                style={{ color: "#ffffff", textDecoration: "none" }}
+              >
+                Home
+              </Link>{" "}
+            </Nav.Link>
+            <Nav.Link>
+              {" "}
+              <Link
+                to="/store"
+                style={{ color: "#ffffff", textDecoration: "none" }}
+              >
+                Store
+              </Link>{" "}
+            </Nav.Link>
+            <Nav.Link>
+              {" "}
+              <Link
+                to="/about"
+                style={{ color: "#ffffff", textDecoration: "none" }}
+              >
+                About
+              </Link>{" "}
+            </Nav.Link>
             {/* <Nav.Link Link="/home">Home</Nav.Link>
             <Nav.Link Link="/store">Store</Nav.Link>
             <Nav.Link Link="/about">About</Nav.Link> */}
