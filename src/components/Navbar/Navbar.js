@@ -2,7 +2,7 @@ import React from "react";
 
 import { Container, Navbar, Nav, Button } from "react-bootstrap";
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const NavbarReact = (props) => {
   return (
@@ -10,40 +10,48 @@ const NavbarReact = (props) => {
       <Navbar bg="dark" expand="lg" variant="dark">
         <Container>
           <Navbar.Brand className="col-md-3">
-            <Link
+            <NavLink
               style={{ color: "#ffffff", textDecoration: "none" }}
               to="/home"
             >
               Nandawana Store
-            </Link>
+            </NavLink>
           </Navbar.Brand>
           <Nav className="col-md-5 justify-content-center">
             <Nav.Link>
               {" "}
-              <Link
+              <NavLink
                 to="/home"
                 style={{ color: "#ffffff", textDecoration: "none" }}
               >
                 Home
-              </Link>{" "}
+              </NavLink>{" "}
             </Nav.Link>
             <Nav.Link>
               {" "}
-              <Link
+              <NavLink
                 to="/store"
                 style={{ color: "#ffffff", textDecoration: "none" }}
               >
                 Store
-              </Link>{" "}
+              </NavLink>{" "}
             </Nav.Link>
             <Nav.Link>
               {" "}
-              <Link
+              <NavLink
                 to="/about"
                 style={{ color: "#ffffff", textDecoration: "none" }}
               >
                 About
-              </Link>{" "}
+              </NavLink>{" "}
+            </Nav.Link>
+            <Nav.Link>
+              <NavLink
+                to="/contact-us"
+                style={{ color: "#ffffff", textDecoration: "none" }}
+              >
+                Contact Us
+              </NavLink>
             </Nav.Link>
             {/* <Nav.Link Link="/home">Home</Nav.Link>
             <Nav.Link Link="/store">Store</Nav.Link>

@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Button, Image } from "react-bootstrap";
 import classes from "./HomePage.module.css";
 
-import PlayImg from "../Assets/play.png";
+import PlayImg from "../components/Assets/play.png";
 
 const toursPlan = [
   {

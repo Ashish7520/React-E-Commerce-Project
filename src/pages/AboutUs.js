@@ -1,11 +1,11 @@
-import StoreImage from "../Assets/nandawana-store-low-resolution-logo-color-on-transparent-background.png";
+import StoreImage from "../components/Assets/nandawana-store-low-resolution-logo-color-on-transparent-background.png";
 import classes from "./About.module.css";
 const AboutUs = (props) => {
   return (
     <>
       <div className={classes.container}>
         <div className={classes.image}>
-          <img src={StoreImage} />
+          <img src={StoreImage} alt="The Nandawana Store" />
         </div>
         <div className={classes.text}>
           <p>

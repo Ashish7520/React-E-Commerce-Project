@@ -1,0 +1,31 @@
+.form {
+  margin-top: 5%;
+  margin-left: 30%;
+  text-align: center;
+  display: grid;
+  width: 30%;
+  gap: 5px;
+}
+
+label {
+  text-align: left;
+  font-weight: bold;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+button {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: azure;
+}
