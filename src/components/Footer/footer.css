@@ -1,19 +1,13 @@
 .footer {
-  position: relative;
-  bottom: 0px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  background-color: #f0f0f0;
-  text-align: center;
-  padding: 10px;
-  overflow: auto;
-
-  /* position: relative;
-  background-color: #28242c;
-  padding: 10px;
-  color: white;
-  top: 600px; */
 }
 
 .img {
   width: 30px;
+  height: 30px;
+  margin: 0 5px;
 }

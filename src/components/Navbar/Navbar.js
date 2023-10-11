@@ -1,58 +1,76 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import { Container, Navbar, Nav, Button } from "react-bootstrap";
 
 import { NavLink } from "react-router-dom";
+import AuthContext from "../../store/Auth-context";
+import "./Navbar.css";
 
 const NavbarReact = (props) => {
+  const authCtx = useContext(AuthContext);
+  const logoutHandler = () => {
+    authCtx.logout();
+  };
+  const isLogin = authCtx.isLogin;
   return (
     <>
-      <Navbar bg="dark" expand="lg" variant="dark">
+      <Navbar className="mainDiv">
         <Container>
           <Navbar.Brand className="col-md-3">
-            <NavLink
-              style={{ color: "#ffffff", textDecoration: "none" }}
-              to="/home"
-            >
+            <NavLink className="brand" to="/home">
               Nandawana Store
             </NavLink>
           </Navbar.Brand>
           <Nav className="col-md-5 justify-content-center">
-            <Nav.Link>
-              {" "}
-              <NavLink
-                to="/home"
-                style={{ color: "#ffffff", textDecoration: "none" }}
-              >
-                Home
-              </NavLink>{" "}
-            </Nav.Link>
-            <Nav.Link>
-              {" "}
-              <NavLink
-                to="/store"
-                style={{ color: "#ffffff", textDecoration: "none" }}
-              >
-                Store
-              </NavLink>{" "}
-            </Nav.Link>
-            <Nav.Link>
-              {" "}
-              <NavLink
-                to="/about"
-                style={{ color: "#ffffff", textDecoration: "none" }}
-              >
-                About
-              </NavLink>{" "}
-            </Nav.Link>
-            <Nav.Link>
-              <NavLink
-                to="/contact-us"
-                style={{ color: "#ffffff", textDecoration: "none" }}
-              >
-                Contact Us
-              </NavLink>
-            </Nav.Link>
+            {isLogin && (
+              <Nav.Link>
+                {" "}
+                <NavLink className="nav" to="/home">
+                  Home
+                </NavLink>{" "}
+              </Nav.Link>
+            )}
+            {isLogin && (
+              <Nav.Link>
+                {" "}
+                <NavLink className="nav" to="/store">
+                  Store
+                </NavLink>{" "}
+              </Nav.Link>
+            )}
+            {isLogin && (
+              <Nav.Link>
+                {" "}
+                <NavLink className="nav" to="/about">
+                  About
+                </NavLink>{" "}
+              </Nav.Link>
+            )}
+            {isLogin && (
+              <Nav.Link>
+                <NavLink className="nav" to="/contact-us">
+                  Contact Us
+                </NavLink>
+              </Nav.Link>
+            )}
+            {!isLogin && (
+              <Nav.Link>
+                <NavLink className="nav" to="/login">
+                  Login
+                </NavLink>
+              </Nav.Link>
+            )}
+            {isLogin && (
+              <Nav.Link>
+                <Button
+                  variant="link"
+                  className="logoutBtn"
+                  onClick={logoutHandler}
+                >
+                  Logout
+                </Button>
+              </Nav.Link>
+            )}
             {/* <Nav.Link Link="/home">Home</Nav.Link>
             <Nav.Link Link="/store">Store</Nav.Link>
             <Nav.Link Link="/about">About</Nav.Link> */}
