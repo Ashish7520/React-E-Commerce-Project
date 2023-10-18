@@ -19,7 +19,6 @@ const LoginPage = () => {
     const enteredEmail = inputEmailRef.current.value;
     const enteredPassword = inputPasswordRef.current.value;
 
-    console.log(enteredEmail, enteredPassword);
     let url;
 
     if (isLogin) {
@@ -44,7 +43,7 @@ const LoginPage = () => {
 
       if (response.ok) {
         const data = await response.json();
-        authCtx.login(data.idToken);
+        authCtx.login(data.idToken, enteredEmail);
         history.replace("/home");
       } else {
         const error = await response.json();

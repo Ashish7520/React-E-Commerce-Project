@@ -15,7 +15,6 @@ const App = () => {
   const [showCart, setShowCart] = useState(false);
   const authCtx = useContext(AuthContext);
   const isLogin = authCtx.isLogin;
-  console.log(isLogin, "insideApp js file");
 
   const showCartHandler = () => {
     setShowCart(true);

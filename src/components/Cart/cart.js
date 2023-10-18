@@ -36,13 +36,15 @@ const Cart = (props) => {
   // });
 
   const cartCtx = useContext(CartContext);
+  const id = cartCtx.id;
   let totalPrice = 0;
   cartCtx.item.map((item) => {
     totalPrice += item.price * item.quantity;
   });
 
-  const addCartHandler = (item) => {
-    cartCtx.addItem({ ...item });
+  const addCartHandler = (item, id) => {
+    console.log(item, "in cart");
+    cartCtx.addItem({ ...item, id: id }, id);
   };
 
   const removeCartHandler = (itemTitle) => {
@@ -75,7 +77,7 @@ const Cart = (props) => {
               <div className={classes.itemQuantity}>
                 <Button
                   variant="secondary"
-                  onClick={() => addCartHandler(item)}
+                  onClick={() => addCartHandler(item, id)}
                 >
                   +
                 </Button>
